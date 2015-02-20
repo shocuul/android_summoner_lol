@@ -30,6 +30,7 @@ public class LolDatabase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + Tables.STATS + "("
             + BaseColumns._ID + "INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + SummonerofLolContract.ChampionsStatsColumns.STATS_CHAMPION_ID + "INTEGER NOT NULL"
             + SummonerofLolContract.ChampionsStatsColumns.STATS_ARMOR + "TEXT NOT NULL,"
             + SummonerofLolContract.ChampionsStatsColumns.STATS_ARMORPERLEVEL + "TEXT NOT NULL,"
             + SummonerofLolContract.ChampionsStatsColumns.STATS_ATTACKDAMAGE + "TEXT NOT NULL,"
